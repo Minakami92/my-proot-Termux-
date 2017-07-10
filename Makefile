@@ -1,4 +1,4 @@
-SHELL = bash
+SHELL = sh
 DESTDIR = /usr/local
 default:
 	@echo "This program is a bash script. You don't need to compile."
