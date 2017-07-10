@@ -1,3 +1,4 @@
+SHELL = bash
 DESTDIR = /usr/local
 default:
 	@echo "This program is a bash script. You don't need to compile."
@@ -6,7 +7,7 @@ default:
 	@echo "To change this, run \"make install DESTDIR=/path/to/install\""
 
 install:
-	@DESTDIR=$(DESTDIR) sh -x ./check.sh
+	@DESTDIR=$(DESTDIR) $(SHELL) -x ./check.sh
 	cp my-proot $(DESTDIR)/bin
 uninstall:
 	rm $(DESTDIR)/bin/my-proot
